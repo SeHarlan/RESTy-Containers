@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import FormContainer from '../../containers/FormContainer';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+
+  return <FormContainer />;
 }
   

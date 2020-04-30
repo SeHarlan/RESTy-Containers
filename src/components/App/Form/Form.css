@@ -1,0 +1,9 @@
+.Form {
+  background-color: slategray;
+  section {
+    margin: 1rem;
+  }
+  label {
+    margin: 1rem ;
+  }
+}
