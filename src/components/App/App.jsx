@@ -6,6 +6,8 @@ import FormContainer from '../../containers/FormContainer';
 import HistoryContainer from '../../containers/HistoryContainer';
 import Results from '../Results';
 
+import style from './App.css';
+
 export default function App() {
   const [history, setHistory] = useState([]);
   const [fetchData, setFetchData] = useState(null);
@@ -16,19 +18,30 @@ export default function App() {
 
   useEffect(() => {
     if(!fetchData) return; 
-
+    setResult(['...Loading (or Nothing Found)']);
     const { url, method, json } = fetchData;
-    setHistory(prev => [...prev, { url, method }]);
-    customFetch(url, method, json).then(res => setResult(res));
+    customFetch(url, method, json).then(res => {
+      if(res === []) {
+        setResult(['No Results Found']);
+      } else {
+        setResult(res);
+        setHistory(prev => [...prev, { url, method }]);
+      }
+    });
 
   }, [fetchData]);
   
 
   return (
     <>
-      <FormContainer setFetchData={setFetchData}/>
-      <Results result={result}/>
-      <HistoryContainer history={history}/>
+      <h1 className={style.header}>REST CLIENT</h1>
+      <section className={style.body}>
+        <HistoryContainer history={history}/>
+        <div>
+          <FormContainer setFetchData={setFetchData}/>
+          <Results result={result}/>
+        </div>
+      </section>
     </>);
 }
   

@@ -8,6 +8,7 @@ exports[`Form component renders Form 1`] = `
   <input
     name="url"
     onChange={[Function]}
+    placeholder="URL"
     type="text"
     value="url"
   />
@@ -49,9 +50,10 @@ exports[`Form component renders Form 1`] = `
     </button>
   </section>
   <textarea
-    cols="30"
+    cols="50"
     name="jsonBody"
     onChange={[Function]}
+    placeholder="Raw JSON body"
     rows="10"
     value="url"
   />

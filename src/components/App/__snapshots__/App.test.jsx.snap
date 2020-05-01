@@ -2,14 +2,25 @@
 
 exports[`App component renders App 1`] = `
 <Fragment>
-  <FormContainer
-    setFetchData={[Function]}
-  />
-  <Results
-    result=""
-  />
-  <HistoryContainer
-    history={Array []}
-  />
+  <h1
+    className="header"
+  >
+    REST CLIENT
+  </h1>
+  <section
+    className="body"
+  >
+    <HistoryContainer
+      history={Array []}
+    />
+    <div>
+      <FormContainer
+        setFetchData={[Function]}
+      />
+      <Results
+        result={Array []}
+      />
+    </div>
+  </section>
 </Fragment>
 `;

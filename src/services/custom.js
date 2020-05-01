@@ -1,6 +1,7 @@
 export const customFetch = (url, method, json) => {
-  if(!json) return fetch(url).then(res => res.json());
 
+  if(method === 'GET' || method === 'DELETE') return fetch(url).then(res => res.json());
+  
   return fetch(url, {
     method: method,
     body: JSON.stringify(json)

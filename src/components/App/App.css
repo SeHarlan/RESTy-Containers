@@ -1,0 +1,13 @@
+.header {
+  background-color: steelblue;
+  padding: 1rem;
+  text-align: center;
+  margin: 0
+}
+.body {
+  display: flex;
+  div {
+    width: 70vw;
+    padding: 1rem;
+  }
+}

@@ -12,14 +12,14 @@ const Form = ({ onSubmit, urlInput, jsonInput, selectedOption = 'GET', onOptionC
   return (
     <form className={style.Form} onSubmit={onSubmit}>
 
-      <input type="text" name="url" value={urlInput} onChange={onUrlChange} />
+      <input type="text" name="url" value={urlInput} onChange={onUrlChange} placeholder="URL"/>
       <section>
 
         {radios}
         <button type="submit">Fetch</button>
       </section>
     
-      <textarea name="jsonBody" value={jsonInput} cols="30" rows="10" onChange={onJsonChange}></textarea>
+      <textarea name="jsonBody" value={jsonInput} cols="50" rows="10" onChange={onJsonChange} placeholder="Raw JSON body"></textarea>
     </form>);
 };
 
