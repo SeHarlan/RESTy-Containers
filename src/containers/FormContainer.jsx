@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Form from '../components/App/Form/Form';
 
 
-const FormContainer = () => {
+const FormContainer = ({ setFetchData }) => {
   const [selectedOption, setSelectedOption] = useState('GET');
   const [json, setJson] = useState('');
   const [url, setUrl] = useState('');
-  const [fetchData, setFetchData] = useState({});
+  
 
   const handleJsonChange = ({ target }) => setJson(target.value);
   const handleUrlChange = ({ target }) => setUrl(target.value);
@@ -23,6 +23,10 @@ const FormContainer = () => {
   };
 
   return (<Form urlInput={url} jsonInput={json} onSubmit={handleSubmit} selectedOption={selectedOption} onOptionChange={handleOptionChange} onUrlChange={handleUrlChange} onJsonChange={handleJsonChange} />);
+};
+
+FormContainer.propTypes = {
+  setFetchData: PropTypes.func.isRequired
 };
 
 export default FormContainer;

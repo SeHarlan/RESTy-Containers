@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `<FormContainer />`;
+exports[`App component renders App 1`] = `
+<Fragment>
+  <FormContainer
+    setFetchData={[Function]}
+  />
+  <Results
+    result=""
+  />
+  <HistoryContainer
+    history={Array []}
+  />
+</Fragment>
+`;
