@@ -11,7 +11,10 @@ describe('Form component', () => {
       selectedOption="GET"
       onOptionChange={()=>{}}
       onJsonChange={()=>{}}
-      onUrlChange={()=>{}} />);
+      onUrlChange={()=>{}} 
+      onBearerTokenChange={()=>{}}
+      onNameChange={()=>{}}
+      onPasswordChange={()=>{}}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -19,13 +19,12 @@ export default function App() {
   useEffect(() => {
     if(!fetchData) return; 
     setResult(['...Loading (or Nothing Found)']);
-    const { url, method, json } = fetchData;
-    customFetch(url, method, json).then(res => {
+    customFetch(fetchData).then(res => {
       if(res === []) {
         setResult(['No Results Found']);
       } else {
         setResult(res);
-        setHistory(prev => [...prev, { url, method }]);
+        setHistory(prev => [...prev, fetchData]);
       }
     });
 
@@ -37,10 +36,10 @@ export default function App() {
       <h1 className={style.header}>REST CLIENT</h1>
       <section className={style.body}>
         <HistoryContainer history={history}/>
-        <div>
+        <article>
           <FormContainer setFetchData={setFetchData}/>
           <Results result={result}/>
-        </div>
+        </article>
       </section>
     </>);
 }

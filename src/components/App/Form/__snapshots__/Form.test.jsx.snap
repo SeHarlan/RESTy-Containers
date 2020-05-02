@@ -49,13 +49,51 @@ exports[`Form component renders Form 1`] = `
       Fetch
     </button>
   </section>
-  <textarea
-    cols="50"
-    name="jsonBody"
-    onChange={[Function]}
-    placeholder="Raw JSON body"
-    rows="10"
-    value="url"
-  />
+  <section
+    className="Json"
+  >
+    <textarea
+      cols="30"
+      name="json"
+      onChange={[Function]}
+      placeholder="Raw JSON body"
+      rows="10"
+      value="url"
+    />
+    <div
+      className="Headers"
+    >
+      <h3>
+        Basic Authorization
+      </h3>
+      <span>
+        Username: 
+      </span>
+      <input
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        type="text"
+      />
+      <span>
+        Password: 
+      </span>
+      <input
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="text"
+      />
+      <span>
+        Bearer Token: 
+      </span>
+      <input
+        name="bearerToken"
+        onChange={[Function]}
+        placeholder="Bearer Token"
+        type="text"
+      />
+    </div>
+  </section>
 </form>
 `;

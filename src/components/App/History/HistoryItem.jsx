@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const HistoryItem = ({ method, url }) => (
+const HistoryItem = ({ url, method, json, username, password, bearerToken }) => (
   <>
     <h2>{method}</h2>
     <p>{url}</p>

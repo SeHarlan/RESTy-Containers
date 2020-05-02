@@ -25,7 +25,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react-json-pretty": "^2.2.0"
+    "react-json-pretty": "^2.2.0",
+    "react-json-view": "^1.19.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import JSONPretty from 'react-json-pretty';
+import ReactJson from 'react-json-view';
 
-import style from './Results.css';
-
+const style = {
+  backgroundColor: 'silver',
+  boxShadow: 'inset 0 0 1rem rgba(0, 0, 0, 0.3)',
+  padding: '1rem',
+  margin: 0,
+  overflow: 'scroll',
+  width: '100%'
+};
 const Results = ({ result }) => (
-  <JSONPretty className={style.Results} data={result}></JSONPretty>
+  <ReactJson src={result} style={style}/>
 );
-
+  
 Results.propTypes = {
   result: PropTypes.array
 };
-
+  
 export default Results;
+  
+

@@ -13,14 +13,14 @@ exports[`App component renders App 1`] = `
     <HistoryContainer
       history={Array []}
     />
-    <div>
+    <article>
       <FormContainer
         setFetchData={[Function]}
       />
       <Results
         result={Array []}
       />
-    </div>
+    </article>
   </section>
 </Fragment>
 `;
